@@ -1,4 +1,4 @@
-name: Build Master
+name: Build Main
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    if: GitHub.ref == 'refs/heads/master' || GitHub.event_name == 'push'
+    if: GitHub.ref == 'refs/heads/main' || GitHub.event_name == 'push'
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
