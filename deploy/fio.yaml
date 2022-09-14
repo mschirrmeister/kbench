@@ -6,7 +6,7 @@ spec:
   volumeMode: Filesystem
   #volumeMode: Block
   #storageClassName: longhorn  # replace with your storage class
-  #storageClassName: local-path
+  storageClassName: local-path
   accessModes:
     - ReadWriteOnce
   resources:
@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name: kbench
-        image: yasker/kbench:latest
+        image: mschirrmeister/kbench:latest
         imagePullPolicy: Always
         env:
         #- name: QUICK_MODE  # for debugging
